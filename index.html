@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Data Collection Camp</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Banner Section -->
+    <div class="banner">
+        <img src="Banner2.png" alt="Banner Image" class="fade-in">
+    </div>
+    <!-- Form Container -->
+    <div class="container my-5">
+        <div class="card shadow-lg p-4 animate__animated animate__fadeInUp">
+            <h1 class="text-center mb-4 form-heading">EX-Student Information Collection Form</h1>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Name</label>
+                    <input type="text" id="name" name="entry.1546622776" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="batch"><i class="fas fa-graduation-cap"></i> Batch</label>
+                    <input type="text" id="batch" name="entry.1927006532" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="profession"><i class="fas fa-briefcase"></i> Current Profession</label>
+                    <input type="text" id="profession" name="entry.998189554" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="address"><i class="fas fa-map-marker-alt"></i> Present Address</label>
+                    <textarea id="address" name="entry.801571369" class="form-control" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="phone"><i class="fas fa-phone"></i> Phone (WhatsApp)</label>
+                    <input type="text" id="phone" name="entry.1352186934" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="facebook"><i class="fab fa-facebook"></i> Facebook ID Link</label>
+                    <input type="url" id="facebook" name="entry.846019141" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container text-center">
+            <img src="Capture.PNG" alt="Logo" class="footer-logo pulse">
+            <p>&copy; 2024 MIU EEE CLUB. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Custom JavaScript to Handle Form Submission -->
+    <script>
+        document.getElementById('studentForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Add your Google Form URL here
+            const googleFormURL = 'https://docs.google.com/forms/d/e/1FAIpQLSfgimN4qp0rDpI5RPPO_X8-eCJOZoXAPn_ouDsZtslFwDtZAw/formResponse';
+
+            // Create a form data object
+            const formData = new FormData(this);
+
+            // Send form data to Google Forms
+            fetch(googleFormURL, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            }).then(() => {
+                window.location.href = 'thank_you.html';
+            }).catch(error => {
+                console.error('Error!', error.message);
+            });
+        });
+    </script>
+</body>
+</html>

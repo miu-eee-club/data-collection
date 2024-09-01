@@ -1,0 +1,155 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5af19 0%, #f12711 100%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Banner Styles */
+.banner img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    display: block;
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Card and Form Styles */
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+.card {
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 1.5rem;
+}
+
+.form-heading {
+    font-weight: 700;
+    color: #f12711;
+    font-size: 2.5rem;
+    background: -webkit-linear-gradient(45deg, #f12711, #f5af19);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    animation: bounceIn 1.5s ease-in-out;
+}
+
+.btn {
+    border-radius: 25px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #f12711, #f5af19); /* Gradient background */
+    color: #fff; /* White text color */
+    padding: 0.75rem 1.5rem; /* Add padding for a larger button */
+    font-size: 1rem; /* Increase font size */
+    text-transform: uppercase; /* Uppercase text */
+    border: none; /* Remove default border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    transition: all 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Pointer cursor on hover */
+    outline: none; /* Remove default outline */
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #f5af19, #f12711); /* Reverse gradient on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+    transform: scale(1.05); /* Slightly enlarge button */
+}
+
+.btn:active {
+    background: #c21807; /* Darker background on click */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reset shadow */
+    transform: scale(0.98); /* Slightly shrink button */
+}
+
+.btn:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 0.2rem rgba(255, 102, 0, 0.5); /* Orange focus shadow */
+}
+
+.form-group i {
+    margin-right: 10px;
+    color: #f12711;
+}
+
+/* Input and Textarea Styles */
+.form-control {
+    background-color: #f9f9f9; /* Light gray background */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    color: #333; /* Dark text color */
+    padding: 0.75rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: #fff; /* White background on focus */
+    border-color: #f12711; /* Red border on focus */
+    box-shadow: 0 0 0 0.2rem rgba(241, 39, 17, 0.25); /* Red shadow on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #f1f1f1;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-logo {
+    width: 50px;
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+    animation: pulse 2s infinite;
+}
+
+.footer p {
+    margin: 0;
+    color: #666;
+}
+.icon-logo{
+    width: 70px;
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 0.5rem;   
+}
+.extra{
+    color: #ccc !important;
+    text-emphasis: 10px !important;
+}
+.extra1{
+    color: #f9f9f9 !important;
+    text-emphasis: 20px !important;
+}
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounceIn {
+    from { opacity: 0; transform: scale(0.3); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+       
+    }
+}
